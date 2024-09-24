@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Kobo Note Extractor</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./lib/dataTables.dataTables.css">
+
+    <script src='node_modules/sql.js/dist/sql-wasm.js'></script>
+    <script src='lib/jquery-3.7.1.js'></script>
+    <script src='lib/dataTables.js'></script>
+    <script src="main.js"></script>
+
+</head>
+
+<div id="instructions">Instructions: Please upload your KoboReader.sqlite file. This file should be in the .kobo folder
+    on your device. This Application was designed for Kobo version 4.38.23038. </div>
+<input type="file" id="upload">
+
+<div id="message"></div>
+
+<div>Result</div>
+
+<body>
+    <table id='result-table'>
+        <thead>
+            <tr>
+                <td>Time</td>
+                <td>Book</td>
+                <td>Section</td>
+                <td>Highlight</td>
+                <td>Comment</td>
+            </tr>
+        </thead>
+        <tbody id='result-body'></tbody>
+    </table>
+</body>
+
+</html>
