@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
     // The `initSqlJs` function is globally provided by all of the main dist files if loaded in the browser.
     // We must specify this locateFile function if we are loading a wasm file from anywhere other than the current html page's folder.
     let config = {
-        locateFile: () => "node_modules/sql.js/dist/sql-wasm.wasm",
+        locateFile: () => "lib/sqljs/dist/sql-wasm.wasm",
     };
     initSqlJs(config).then(function (SQL) {
         console.log("sql.js initialized 🎉");
